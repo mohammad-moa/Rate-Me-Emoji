@@ -1,0 +1,130 @@
+/* General Styles */
+
+:root {
+    --orange-primary: hsl(25, 91%, 55%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(218, 14%, 70%);
+    --medium-grey: hsl(216, 25%, 30%);
+    --dark-blue: hsl(213, 27%, 19%);
+    --very-dark-blue: hsl(210, 12%, 10%);
+}
+
+html,
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--very-dark-blue);
+}
+
+button {
+    border: 0;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+*:focus,
+*:active,
+*:hover {
+    outline: none;
+}
+
+/* Desktop Styles */
+
+#main {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.total-box-rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.star-image-box {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background-color: var(--medium-grey);
+}
+
+.star-image {
+    width: 40%;
+    max-width: 100%;
+    height: auto;
+}
+
+.total-text-box {
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.title-rate {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.description-rate {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--light-grey);
+}
+
+.total-range-box {
+    position: relative;
+    width: 95%;
+}
+
+.range-emoji-rate {
+    appearance: none;
+    width: 100%;
+    height: 3px;
+    border-radius: 30px;
+    cursor: grab;
+}
+
+.range-emoji-rate::-webkit-slider-thumb {
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: var(--orange-primary);
+}
+
+.submitbtn-rate {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: var(--orange-primary);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 550px) {
+    .total-box-rate {
+        width: 80%;
+    }
+}
