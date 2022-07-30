@@ -12,6 +12,7 @@ imageStarBoxRate.append(spanEmojis)
 let emojiImage = document.querySelector(".emoji-image");
 let imageStarRate = document.querySelector(".star-image");
 
+let buttonSend = document.querySelector(".submitbtn-rate");
 
 const handleRangeEmojiChange = () => {
     rangeEmojis.addEventListener("input", () => {
@@ -36,3 +37,23 @@ const handleRangeEmojiChange = () => {
 handleRangeEmojiChange()
 
 
+
+const handleEmojiSubmit = () => {
+    if (emojiImage.innerHTML.length > 0) {
+        totalBoxRate.setAttribute("style", "transform:rotateY(180deg)");
+        imageStarBoxRate.setAttribute("style", `width: 60px;height: 60px;`);
+        emojiImage.style.fontSize = "27px";
+
+        totalTextBox.setAttribute("style", "transform:rotateY(180deg)");
+        totalTextBox.querySelector(".title-rate").innerHTML = `رتبه ${rangeEmojis.value} از 5`
+        if (rangeEmojis.value <= 3) {
+            totalTextBox.querySelector(".description-rate").innerHTML = "خیلی کم رتبه دادی"
+        } else {
+            totalTextBox.querySelector(".description-rate").innerHTML = "خیلی ممنون از رتبه ای که بهم دادی"
+        }
+
+        rangeEmojis.parentElement.style.display = "none";
+        buttonSend.style.display = "none";
+    }
+}
+buttonSend.addEventListener('click', handleEmojiSubmit);
